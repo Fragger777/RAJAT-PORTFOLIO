@@ -1,0 +1,374 @@
+
+/*  */
+body
+{
+  overflow-x: hidden;
+}
+.container-fluid
+{
+  scroll-behavior: smooth;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav-item
+{
+    font-family: eurostile,sans-serif;
+    margin-left: 10px;
+   
+   
+}
+.nav-list
+{
+    color: #5BE9B9;
+}
+.nav-item:hover
+{
+    color: #6E07F3;
+    border: 5px #6E07F3;
+  
+}
+.title
+{
+    text-align: center;
+    margin-top: 50px;
+    font-family: eurostile,sans-serif;
+    font-weight: 800;
+    font-size: 45px;
+}
+.subtitle
+{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 400;
+}
+h2
+{
+    font-family: eurostile,sans-seriferto;
+}
+.avatar
+{
+    margin-top: 60px;
+    text-align: center;
+}
+.banner
+{
+    margin-top: 100px;
+    text-align: center;
+}
+.intro
+{
+    font-size: 40px;
+    color: white;
+    text-align: center; 
+    font-weight: 800;
+}
+.font-display
+{
+    font-family: eurostile,sans-serif;
+}
+.outer
+{
+    background-color: #6E07F3;
+    height: 700px;
+    margin-bottom: -350px;
+}
+.sec
+{
+   padding-top: 160px;
+}
+.sec2
+{
+    text-align:center;
+    font-size: 15px;
+    font-weight: lighter;
+    font-family: eurostile,sans-serif;
+}
+.items
+{
+    margin-left: auto;
+    margin-right: 40px;
+    font-size: 20px;
+}
+.self-info
+{
+     font-family:eurostile,sans-serif;
+}
+.name 
+{
+    
+    padding-top: 150px;
+    
+
+}
+.abt
+{
+  font-size: 50px;
+  font-weight: 500;
+  color:beige;
+}
+.abt-text
+{
+font-size: 35px;
+font-weight: 500;
+font-style: italic;
+
+}
+.info2
+{
+    font-size: 20px;
+    font-weight: 300;
+    padding-top: 20px;
+}
+p
+{
+    font-family:eurostile,sans-serif;       
+}
+/* card styling */
+.sub-heading{
+ color: #6E07F3;
+ font-size: 20px;   
+}
+
+.border-r{
+    border-radius: 10px;
+    background-color: white;
+    border: 1px solid #141c3a;
+    
+}
+h3
+{
+  font-weight: 550;
+  color: #5BE9B9  ;
+}
+
+.timeline-text
+{
+  color: #141c3a;
+}
+
+/* Timeline */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: white;
+    font-family: Helvetica, sans-serif;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: #6E07F3;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+  }
+  
+  /* Container around content */
+  .container-t{
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 50%;
+  }
+  
+  /* The circles on the timeline */
+  .container-t::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #5BE9B9;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  /* Place the container to the left */
+  .left {
+    left: 0;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    left: 50%;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid black;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent black;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid black;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: #5BE9B9;
+    position: relative;
+    border-radius: 6px;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 31px;
+    }
+    
+    /* Full-width containers */
+    .container-t {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .container-t::before {
+    left: 60px;
+    border: medium solid black;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent black transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+  }
+/* contact */
+
+.contact
+{
+    
+    background-color: #141c3a;
+    border-radius: 20px;
+    height: 550px;
+    width: 90%;
+    margin-bottom: -200px;   
+}
+.contact-title
+{
+    color: white;
+}
+.btn
+{
+    background-color: #5BE9B9;
+}
+.footer
+{
+    background-color:#6E07F3;
+    height: 700px;
+    width:auto ;
+    padding-top: 250px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+
+.ft.logo
+{
+    color: white !important;
+}
+/* .footer-end
+{
+  color: white;
+  font-size: 18px;
+  fon
+} */
+.carousel{
+  animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+@keyframes fadeInAnimation 
+{
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+   }
+  }
+  .home-text
+  {
+    color: #432C7A;
+    font-weight: 600;
+    
+  }
+  .im
+  {
+    color: #432C7A;
+    font-weight: 600;
+    
+  }
+  .social
+  {
+    margin-top: -50px;
+  }
+.footer-content
+{
+  padding-top: 110px;
+}
+.footer-end
+{
+  font-size: 10px;
+}
+.dev{
+  height: auto;
+  width:60%;
+}
+.nav-logo
+{
+  height: auto;
+  width: 10%;
+}
